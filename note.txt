@@ -1,2 +1,55 @@
 https://github.com/hngprojects/flutter-starter
 
+Here's how to push your local `flutter_starter` contents into that GitHub repo without nesting:
+
+## Step-by-step
+
+**1. Navigate into your local project folder**
+```bash
+cd flutter_starter
+```
+
+**2. Initialize git (if not already done)**
+```bash
+git init
+```
+
+**3. Add the remote repo**
+```bash
+git remote add origin https://github.com/hngprojects/flutter-starter.git
+```
+
+If you already have a remote called `origin`, update it instead:
+```bash
+git remote set-url origin https://github.com/hngprojects/flutter-starter.git
+```
+
+**4. Stage all your files**
+```bash
+git add .
+```
+
+**5. Commit**
+```bash
+git commit -m "Initial commit"
+```
+
+**6. Push to the repo**
+```bash
+git push -u origin main
+```
+
+> If your default branch is `master`, use `git push -u origin master`. If the remote has a default branch already (like `main`), you may need to force push:
+> ```bash
+> git push -u origin main --force
+> ```
+
+---
+
+## Why this works without nesting
+
+Since you `cd` **into** `flutter_starter` before running `git add .`, git treats that folder as the root — so only the *contents* get pushed, not the folder itself. The repo will look exactly like your `flutter_starter` directory from the inside.
+
+---
+
+**Quick tip:** If you need to authenticate (especially for an org repo like `hngprojects`), make sure you're using a [Personal Access Token](https://github.com/settings/tokens) as your password, or have SSH set up.
