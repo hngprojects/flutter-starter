@@ -1,6 +1,6 @@
 # flutter_starter
 
-A Flutter starter template for building REST-backed apps with feature-first Clean Architecture.
+A Flutter starter template for building apps with clean arch.
 
 ## Stack
 
